@@ -1,6 +1,6 @@
 # Programación de Computadores 2021-2
 
-[Clase 1: Conceptos básicos de hardware y software](clase-1-2)
+[Clase 1-2: Conceptos básicos de hardware y software](clase-1-2)
 
 [Clase 3: Conceptos básicos de programación](clase-3)
 
