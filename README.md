@@ -11,3 +11,5 @@
 [Clase 6: Algoritmos y estructuras de control](clase-6)
 
 [Clase 7-9: Estructuras de control y ejercicios resueltos](clase-7-9)
+
+[Clase 11: Estructura de un programa](clase-11)
