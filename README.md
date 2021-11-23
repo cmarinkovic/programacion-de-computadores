@@ -13,3 +13,5 @@
 [Clase 7-9: Estructuras de control y ejercicios resueltos](clase-7-9)
 
 [Clase 11: Estructura de un programa](clase-11)
+
+[Clase 18: Arreglos](clase-18)
