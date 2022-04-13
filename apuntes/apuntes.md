@@ -329,9 +329,17 @@ Algoritmo TiendaMusical5
 		
 		Segun opc Hacer
 			1: 
+				Escribir "Indique la cantidad de guitarras: "
+				Leer cGuitarras
+					
+				Si cGuitarras < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
+				
 				Mientras cGuitarras < 0 Hacer
 					Escribir "Indique la cantidad de guitarras: "
 					Leer cGuitarras
@@ -342,6 +350,13 @@ Algoritmo TiendaMusical5
 				FinMientras
 				
 			2: 
+				Escribir "Indique la cantidad de bajos: "
+				Leer cBajos
+					
+				Si cBajos < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBajos < 0 Hacer
 					Escribir "Indique la cantidad de bajos: "
 					Leer cBajos
@@ -351,6 +366,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			3: 
+				Escribir "Indique la cantidad de violines: "
+				Leer cViolines
+					
+				Si cViolines < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cViolines < 0 Hacer
 					Escribir "Indique la cantidad de violines: "
 					Leer cViolines
@@ -360,6 +382,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			4: 
+				Escribir "Indique la cantidad de baterias: "
+				Leer cBaterias
+					
+				Si cBaterias < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBaterias < 0 Hacer
 					Escribir "Indique la cantidad de baterias: "
 					Leer cBaterias
@@ -369,6 +398,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			5: 
+				Escribir "Indique la cantidad de teclados: "
+				Leer cTeclados
+					
+				Si cTeclados < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cTeclados < 0 Hacer
 					Escribir "Indique la cantidad de teclados: "
 					Leer cTeclados
@@ -473,6 +509,14 @@ Algoritmo TiendaMusical6
 		
 		Segun opc Hacer
 			1: 
+
+				Escribir "Indique la cantidad de guitarras: "
+				Leer cGuitarras
+					
+				Si cGuitarras < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
@@ -486,6 +530,13 @@ Algoritmo TiendaMusical6
 				FinMientras
 				
 			2: 
+				Escribir "Indique la cantidad de bajos: "
+				Leer cBajos
+					
+				Si cBajos < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBajos < 0 Hacer
 					Escribir "Indique la cantidad de bajos: "
 					Leer cBajos
@@ -612,6 +663,13 @@ Algoritmo TiendaMusical7
 				// será 0 por lo que no restará nada.
 				total <- total - cGuitarras * 200000 
 				
+				Escribir "Indique la cantidad de guitarras: "
+				Leer cGuitarras
+					
+				Si cGuitarras < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
@@ -642,6 +700,13 @@ Algoritmo TiendaMusical7
 			3: 
 				total <- total - cViolines * 150000
 				
+				Escribir "Indique la cantidad de violines: "
+				Leer cViolines
+					
+				Si cViolines < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cViolines < 0 Hacer
 					Escribir "Indique la cantidad de violines: "
 					Leer cViolines
@@ -655,6 +720,13 @@ Algoritmo TiendaMusical7
 			4: 
 				total <- total - cBaterias * 250000
 				
+				Escribir "Indique la cantidad de baterias: "
+				Leer cBaterias
+					
+				Si cBaterias < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBaterias < 0 Hacer
 					Escribir "Indique la cantidad de baterias: "
 					Leer cBaterias
@@ -667,6 +739,13 @@ Algoritmo TiendaMusical7
 				total <- total + cBaterias * 250000
 			5: 
 				total <- total - cTeclados * 200000
+				
+				Escribir "Indique la cantidad de teclados: "
+				Leer cTeclados
+					
+				Si cTeclados < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
 				
 				Mientras cTeclados < 0 Hacer
 					Escribir "Indique la cantidad de teclados: "
@@ -789,6 +868,13 @@ Algoritmo TiendaMusical5
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
+				Escribir "Indique la cantidad de guitarras: "
+				Leer cGuitarras
+					
+				Si cGuitarras < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cGuitarras < 0 Hacer
 					Escribir "Indique la cantidad de guitarras: "
 					Leer cGuitarras
@@ -799,6 +885,14 @@ Algoritmo TiendaMusical5
 				FinMientras
 				
 			2: 
+			
+				Escribir "Indique la cantidad de bajos: "
+				Leer cBajos
+					
+				Si cBajos < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+					
 				Mientras cBajos < 0 Hacer
 					Escribir "Indique la cantidad de bajos: "
 					Leer cBajos
@@ -808,6 +902,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			3: 
+				Escribir "Indique la cantidad de violines: "
+				Leer cViolines
+					
+				Si cViolines < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+					
 				Mientras cViolines < 0 Hacer
 					Escribir "Indique la cantidad de violines: "
 					Leer cViolines
@@ -817,6 +918,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			4: 
+				Escribir "Indique la cantidad de baterias: "
+				Leer cBaterias
+					
+				Si cBaterias < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBaterias < 0 Hacer
 					Escribir "Indique la cantidad de baterias: "
 					Leer cBaterias
@@ -826,6 +934,13 @@ Algoritmo TiendaMusical5
 					FinSi
 				FinMientras
 			5: 
+				Escribir "Indique la cantidad de teclados: "
+				Leer cTeclados
+					
+				Si cTeclados < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+			
 				Mientras cTeclados < 0 Hacer
 					Escribir "Indique la cantidad de teclados: "
 					Leer cTeclados
@@ -947,6 +1062,15 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				4:
+						Escribir "Cantidad a agregar a la boleta: "
+						Leer cantidad
+						
+					Si cBaterias - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cBaterias <- cBaterias - cantidad
+					FinSi
+						
 					Mientras cBaterias < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -958,6 +1082,15 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				5:
+				Escribir "Cantidad a agregar a la boleta: "
+						Leer cantidad
+						
+					Si cTeclados - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cTeclados <- cTeclados - cantidad
+					FinSi
+					
 					Mientras cTeclados < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad

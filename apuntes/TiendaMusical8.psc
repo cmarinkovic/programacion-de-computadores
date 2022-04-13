@@ -2,11 +2,11 @@ Algoritmo TiendaMusical8
 	Escribir "Tienda musical"
 	
 	// En estas variables se almacena la cantidad de cada producto
-	cGuitarras <- 0 
-	cBajos <- 0
-	cViolines <- 0
-	cBaterias <- 0
-	cTeclados <- 0
+	cGuitarras <- -1
+	cBajos <- -1
+	cViolines <- -1
+	cBaterias <- -1
+	cTeclados <- -1
 	
 	// Esta variable permite seleccionar la opción 
 	// y además controlar si el ciclo continúa.
@@ -27,6 +27,7 @@ Algoritmo TiendaMusical8
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
+				
 				Mientras cGuitarras < 0 Hacer
 					Escribir "Indique la cantidad de guitarras: "
 					Leer cGuitarras
