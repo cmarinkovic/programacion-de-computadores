@@ -1,5 +1,7 @@
 # Programación de Computadores 2022-1
 
+[Apuntes](apuntes/apuntes)
+
 [Clase 1-2: Conceptos básicos de hardware y software](clase-1-2)
 
 [Clase 3: Conceptos básicos de programación](clase-3)
