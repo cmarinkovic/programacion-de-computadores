@@ -509,7 +509,6 @@ Algoritmo TiendaMusical6
 		
 		Segun opc Hacer
 			1: 
-
 				Escribir "Indique la cantidad de guitarras: "
 				Leer cGuitarras
 					
@@ -682,10 +681,16 @@ Algoritmo TiendaMusical7
 					FinSi
 				FinMientras
 				
-				
 				total <- total + cGuitarras * 200000
 			2: 
 				total <- total - cBajos * 300000
+				
+				Escribir "Indique la cantidad de bajos: "
+				Leer cBajos
+					
+				Si cBajos < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
 				
 				Mientras cBajos < 0 Hacer
 					Escribir "Indique la cantidad de bajos: "
@@ -839,7 +844,7 @@ Problema: "Una tienda musical necesita contar con un programa que le permita a s
 Este problema implica preguntar al usuario en cuántas boletas desea dividir su compra. Por lo tanto, debe repetirse un conjunto de instrucciones una cantidad determinada (o predefinida por el usuario) de veces. En este caso, conviene utilizar el ciclo *Para*. 
 
 ```pseudocode
-Algoritmo TiendaMusical5
+Algoritmo TiendaMusical8
 	Escribir "Tienda musical"
 	
 	// En estas variables se almacena la cantidad de cada producto
@@ -883,7 +888,6 @@ Algoritmo TiendaMusical5
 						Escribir "No puede indicar una cantidad negativa."
 					FinSi
 				FinMientras
-				
 			2: 
 			
 				Escribir "Indique la cantidad de bajos: "
@@ -1029,6 +1033,15 @@ Algoritmo TiendaMusical5
 			
 			Segun opc Hacer
 				1: 
+					Escribir "Cantidad a agregar a la boleta: "
+						Leer cantidad
+		
+					Si cGuitarras - cantidad < 0 Entonces
+							Escribir "Cantidad inválida"
+					SiNo
+							cGuitarras <- cGuitarras - cantidad
+					FinSi
+				
 					Mientras cGuitarras < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -1040,6 +1053,15 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				2: 
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+						
+					Si cBajos - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cBajos <- cBajos - cantidad
+					FinSi
+						
 					Mientras cBajos < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -1051,6 +1073,15 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				3: 
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+						
+					Si cViolines - cantidad < 0 Entonces
+							Escribir "Cantidad inválida"
+						SiNo
+							cViolines <- cViolines - cantidad
+					FinSi
+					
 					Mientras cViolines < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -1062,8 +1093,8 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				4:
-						Escribir "Cantidad a agregar a la boleta: "
-						Leer cantidad
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
 						
 					Si cBaterias - cantidad < 0 Entonces
 						Escribir "Cantidad inválida"
@@ -1082,8 +1113,8 @@ Algoritmo TiendaMusical5
 						FinSi
 					FinMientras
 				5:
-				Escribir "Cantidad a agregar a la boleta: "
-						Leer cantidad
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
 						
 					Si cTeclados - cantidad < 0 Entonces
 						Escribir "Cantidad inválida"
