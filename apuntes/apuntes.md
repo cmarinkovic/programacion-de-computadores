@@ -99,10 +99,10 @@ Algoritmo TiendaMusical2
 		Escribir "Total:", ventaConIVA * 0.95
 	Sino 
 		Si esClienteFrecuente == 2 Entonces
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 		SiNo
 			Escribir "Opción inválida. No se aplicará descuento."
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 		FinSi
 	FinSi
 FinAlgoritmo
@@ -133,10 +133,10 @@ Algoritmo TiendaMusical3
 			Escribir "Descuento 5%"
 			Escribir "Total:", ventaConIVA * 0.95
 		2: 
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 		De Otro Modo: 
 			Escribir "Opción inválida. No se aplicará descuento."
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 	FinSegun
 FinAlgoritmo
 ```
@@ -289,10 +289,10 @@ Algoritmo TiendaMusical4
 				Escribir "Descuento 5%"
 				Escribir "Total:", ventaConIVA * 0.95
 			2: 
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA
 			De Otro Modo: 
 				Escribir "Opción inválida. No se aplicará descuento."
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA
 		FinSegun
 	SiNo
 		Escribir "No hay suficientes productos."
@@ -475,10 +475,10 @@ Algoritmo TiendaMusical5
 				Escribir "Descuento 5%"
 				Escribir "Total:", ventaConIVA * 0.95
 			2: 
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA
 			De Otro Modo: 
 				Escribir "Opción inválida. No se aplicará descuento."
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA
 		FinSegun
 	SiNo
 		Escribir "No hay suficientes productos."
@@ -591,10 +591,10 @@ Algoritmo TiendaMusical6
 				Escribir "Descuento 5%"
 				Escribir "Total:", ventaConIVA * 0.95
 			2: 
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA 
 			De Otro Modo: 
 				Escribir "Opción inválida. No se aplicará descuento."
-				Escribir "Total:", ventaConIVA * 0.95
+				Escribir "Total:", ventaConIVA
 		FinSegun
 	SiNo
 		Escribir "No hay suficientes productos."
@@ -824,10 +824,10 @@ Algoritmo TiendaMusical7
 			Escribir "Descuento 5%"
 			Escribir "Total:", ventaConIVA * 0.95
 		2: 
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 		De Otro Modo: 
 			Escribir "Opción inválida. No se aplicará descuento."
-			Escribir "Total:", ventaConIVA * 0.95
+			Escribir "Total:", ventaConIVA
 		FinSegun
 	SiNo
 		Escribir "No hay suficientes productos."
@@ -1155,7 +1155,7 @@ Algoritmo TiendaMusical8
 					Escribir "Descuento 5%"
 					Escribir "Total:", ventaConIVA * 0.95
 				2: 
-					Escribir "Total:", ventaConIVA * 0.95
+					Escribir "Total:", ventaConIVA
 				FinSegun
 			FinSi
 		FinPara

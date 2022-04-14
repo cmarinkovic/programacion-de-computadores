@@ -2,11 +2,11 @@ Algoritmo TiendaMusical8
 	Escribir "Tienda musical"
 	
 	// En estas variables se almacena la cantidad de cada producto
-	cGuitarras <- -1
-	cBajos <- -1
-	cViolines <- -1
-	cBaterias <- -1
-	cTeclados <- -1
+	cGuitarras <- 0 
+	cBajos <- 0
+	cViolines <- 0
+	cBaterias <- 0
+	cTeclados <- 0
 	
 	// Esta variable permite seleccionar la opción 
 	// y además controlar si el ciclo continúa.
@@ -27,6 +27,12 @@ Algoritmo TiendaMusical8
 				// Este ciclo se utiliza para repetir la lectura de
 				// la cantidad de guitarras, si el usuario ingresa
 				// una cantidad menor a 0.
+				Escribir "Indique la cantidad de guitarras: "
+				Leer cGuitarras
+				
+				Si cGuitarras < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
 				
 				Mientras cGuitarras < 0 Hacer
 					Escribir "Indique la cantidad de guitarras: "
@@ -36,8 +42,15 @@ Algoritmo TiendaMusical8
 						Escribir "No puede indicar una cantidad negativa."
 					FinSi
 				FinMientras
-				
 			2: 
+				
+				Escribir "Indique la cantidad de bajos: "
+				Leer cBajos
+				
+				Si cBajos < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBajos < 0 Hacer
 					Escribir "Indique la cantidad de bajos: "
 					Leer cBajos
@@ -47,6 +60,13 @@ Algoritmo TiendaMusical8
 					FinSi
 				FinMientras
 			3: 
+				Escribir "Indique la cantidad de violines: "
+				Leer cViolines
+				
+				Si cViolines < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cViolines < 0 Hacer
 					Escribir "Indique la cantidad de violines: "
 					Leer cViolines
@@ -56,6 +76,13 @@ Algoritmo TiendaMusical8
 					FinSi
 				FinMientras
 			4: 
+				Escribir "Indique la cantidad de baterias: "
+				Leer cBaterias
+				
+				Si cBaterias < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cBaterias < 0 Hacer
 					Escribir "Indique la cantidad de baterias: "
 					Leer cBaterias
@@ -65,6 +92,13 @@ Algoritmo TiendaMusical8
 					FinSi
 				FinMientras
 			5: 
+				Escribir "Indique la cantidad de teclados: "
+				Leer cTeclados
+				
+				Si cTeclados < 0 Entonces
+					Escribir "No puede indicar una cantidad negativa."
+				FinSi
+				
 				Mientras cTeclados < 0 Hacer
 					Escribir "Indique la cantidad de teclados: "
 					Leer cTeclados
@@ -153,10 +187,19 @@ Algoritmo TiendaMusical8
 			
 			Segun opc Hacer
 				1: 
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+					
+					Si cGuitarras - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cGuitarras <- cGuitarras - cantidad
+					FinSi
+					
 					Mientras cGuitarras < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
-					
+						
 						Si cGuitarras - cantidad < 0 Entonces
 							Escribir "Cantidad inválida"
 						SiNo
@@ -164,6 +207,15 @@ Algoritmo TiendaMusical8
 						FinSi
 					FinMientras
 				2: 
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+					
+					Si cBajos - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cBajos <- cBajos - cantidad
+					FinSi
+					
 					Mientras cBajos < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -175,6 +227,15 @@ Algoritmo TiendaMusical8
 						FinSi
 					FinMientras
 				3: 
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+					
+					Si cViolines - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cViolines <- cViolines - cantidad
+					FinSi
+					
 					Mientras cViolines < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -186,6 +247,15 @@ Algoritmo TiendaMusical8
 						FinSi
 					FinMientras
 				4:
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+					
+					Si cBaterias - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cBaterias <- cBaterias - cantidad
+					FinSi
+					
 					Mientras cBaterias < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -197,6 +267,15 @@ Algoritmo TiendaMusical8
 						FinSi
 					FinMientras
 				5:
+					Escribir "Cantidad a agregar a la boleta: "
+					Leer cantidad
+					
+					Si cTeclados - cantidad < 0 Entonces
+						Escribir "Cantidad inválida"
+					SiNo
+						cTeclados <- cTeclados - cantidad
+					FinSi
+					
 					Mientras cTeclados < 0 Hacer
 						Escribir "Cantidad a agregar a la boleta: "
 						Leer cantidad
@@ -226,15 +305,15 @@ Algoritmo TiendaMusical8
 				Escribir "Venta con IVA:", ventaConIVA
 				
 				Según esClienteFrecuente Hacer
-				1: 
-					Escribir "Descuento 5%"
-					Escribir "Total:", ventaConIVA * 0.95
-				2: 
-					Escribir "Total:", ventaConIVA * 0.95
-				FinSegun
-			FinSi
-		FinPara
-	SiNo
-		Escribir "No hay suficientes productos."
+			1: 
+				Escribir "Descuento 5%"
+				Escribir "Total:", ventaConIVA * 0.95
+			2: 
+				Escribir "Total:", ventaConIVA
+		FinSegun
 	FinSi
+FinPara
+SiNo
+	Escribir "No hay suficientes productos."
+FinSi
 FinAlgoritmo
