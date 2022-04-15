@@ -1,5 +1,7 @@
 # Programación de Computadores
 
+* Placeholder for Table of Content (Must not be removed) <newline> {:toc}
+
 ## Introducción
 
 Esta página contiene apuntes del curso Programación de Computadores de la Universidad de La Frontera, actualizados al 1º semestre de 2022. A lo largo de los apuntes, se revisa un ejemplo de problema de una tienda musical, que va aumentando en complejidad.
