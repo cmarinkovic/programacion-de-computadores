@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://cmarinkovic.github.io/programacion-de-computadores/sitemap.xml

@@ -1,0 +1,1051 @@
+<!doctype html><html lang=es dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Tienda musical | Programación de Computadores 2022-1</title><meta name=keywords content><meta name=description content="Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt."><meta name=author content="Cristóbal Marinkovic"><link rel=canonical href=https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/><link crossorigin=anonymous href=/programacion-de-computadores/assets/css/stylesheet.min.48a18943c2fc15c38a372b8dde1f5e5dc0bc64fa6cb90f5a817d2f8c76b7f3ae.css integrity="sha256-SKGJQ8L8FcOKNyuN3h9eXcC8ZPpsuQ9agX0vjHa3864=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/programacion-de-computadores/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="Tienda musical"><meta property="og:description" content="Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt."><meta property="og:type" content="article"><meta property="og:url" content="https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/"><meta property="og:image" content="https://cmarinkovic.github.io/programacion-de-computadores/%3Cimage%20path/url%3E"><meta property="article:section" content="publicaciones"><meta property="article:published_time" content="2022-04-17T00:20:33-04:00"><meta property="article:modified_time" content="2022-04-17T00:20:33-04:00"><meta property="og:site_name" content="Programación de Computadores 2022-1"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://cmarinkovic.github.io/programacion-de-computadores/%3Cimage%20path/url%3E"><meta name=twitter:title content="Tienda musical"><meta name=twitter:description content="Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Publicaciones","item":"https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/"},{"@type":"ListItem","position":2,"name":"Tienda musical","item":"https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tienda musical","name":"Tienda musical","description":"Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt.","keywords":[],"articleBody":"A continuación, se desarrolla un problema de ejemplo en PSeInt con niveles progresivos de dificultad, donde se explican y aplican los conceptos básicos revisados en la asignatura.\nLeer, Escribir y asignación Dentro de las instrucciones fundamentales de PSeInt se encuentran Leer y Escribir, que permiten respectivamente recibir datos del usuario y mostrar datos por pantalla. La asignación permite evaluar una expresión y guardar su resultado (dato) en una variable, y designar un identificador o “nombre” para ésta.\nProblema: “Una tienda musical necesita contar con un programa que le permita calcular el IVA para sus ventas.”\nA partir del enunciado, se puede inferir que las entradas son el monto de venta y las salidas el IVA de la venta. También, la tienda podría necesitar saber la venta con IVA y sin IVA. Este es un análisis sencillo, pero importante para producir un programa que le “sirva” a la tienda.\nAlgoritmo TiendaMusical1 Escribir \"Tienda musical\" Escribir \"Ingrese el monto de la venta: \" Leer monto IVA Estructuras condicionales (Si, Si-SiNo y Según) Las estructuras condicionales permiten decidir qué bloque de código ejecutar según el resultado de una expresión que se evalúa al momento de ejecución, como toda expresión.\nProblema: “Una tienda musical necesita contar con un programa que le permita calcular el IVA para sus ventas, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total.”\nAlgoritmo TiendaMusical2 Escribir \"Tienda musical\" Escribir \"Ingrese el monto de la venta: \" Leer monto IVA Este algoritmo también puede realizarse con la estructura de control Según, que tiende a ser útil en situaciones simples donde “según el valor de una variable se realizan ciertas acciones (se ejecuta un bloque de código)”. Si y Si-SiNo se prefieren para situaciones donde las expresiones booleanas son más complicadas, por ejemplo cuando son comparaciones entre números o expresiones booleanas (a  b y a  c no puede evaluarse en un Según) compuestas.\nAlgoritmo TiendaMusical3 Escribir \"Tienda musical\" Escribir \"Ingrese el monto de la venta: \" Leer monto IVA Ciclos (Mientras, Para) Generalmente en un programa se necesitan repetir acciones para lograr un objetivo, y así resolver un problema. Los ciclos permiten repetir un bloque de código múltiples veces si es necesario. Se ejecutan a intervalos discretos, es decir, una o más veces, una a una. Para esto cuentan con una expresión de control, que cada vez que inicia el ciclo o se pretende iniciar nuevamente (desde la segunda “vuelta” en adelante), se evalúa y retorna el dato verdadero o falso, según este dato el ciclo continúa o termina (depende de qué ciclo se trate si necesita un valor verdadero o falso para continuar). En la asignatura se utiliza el ciclo Mientras y Para que requieren que sus expresiones de control (también conocidas como “condiciones de término”) sean verdaderas.\nProblema: “Una tienda musical necesita contar con un programa que le permita a sus clientes registrar sus compras mientras las realizan, indicando los productos disponibles, permitiendo agregar y remover productos a su carro y calcular el monto total que suma el carro. Además al finalizar la compra se deberá calcular el IVA para la venta, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total.”\nAlgoritmo TiendaMusical4 Escribir \"Tienda musical\" // En estas variables se almacena la cantidad de cada producto cGuitarras 0 Entonces cGuitarras 0 Entonces cBajos 0 Entonces cViolines 0 Entonces cBaterias 0 Entonces cTeclados 1 Entonces Escribir \"Has comprado: \" Si cGuitarras  1 Entonces Escribir \"Guitarras: \", cGuitarras FinSi Si cBajos  1 Entonces Escribir \"Bajos: \", cBajos FinSi Si cViolines  1 Entonces Escribir \"Violines: \", cViolines FinSi Si cBaterias  1 Entonces Escribir \"Baterias: \", cBaterias FinSi Si cTeclados  1 Entonces Escribir \"Teclados: \", cTeclados FinSi total Una alternativa que es más eficiente para el usuario es que en vez de agregar/remover al carro productos de manera unitaria, pueda indicar cuánto llevará de un producto determinado. Para lograr esto habría que cambiar el código de la siguiente manera.\nAlgoritmo TiendaMusical5 Escribir \"Tienda musical\" // En estas variables se almacena la cantidad de cada producto cGuitarras 1 Entonces Escribir \"Has comprado: \" Si cGuitarras  1 Entonces Escribir \"Guitarras: \", cGuitarras FinSi Si cBajos  1 Entonces Escribir \"Bajos: \", cBajos FinSi Si cViolines  1 Entonces Escribir \"Violines: \", cViolines FinSi Si cBaterias  1 Entonces Escribir \"Baterias: \", cBaterias FinSi Si cTeclados  1 Entonces Escribir \"Teclados: \", cTeclados FinSi total La longitud del código ha aumentado a 145 líneas. Esto se debe principalmente a que el código “repite” una misma acción para cada instrumento. Si se observa el código para 2 instrumentos, por ejemplo, la cantidad de líneas disminuye a 97 líneas, incluyendo los comentarios.\nAlgoritmo TiendaMusical6 Escribir \"Tienda musical\" // En estas variables se almacena la cantidad de cada producto cGuitarras 1 Entonces Escribir \"Has comprado: \" Si cGuitarras  1 Entonces Escribir \"Guitarras: \", cGuitarras FinSi Si cBajos  1 Entonces Escribir \"Bajos: \", cBajos FinSi total Por lo tanto, si las acciones son “repetitivas” es recomedable realizar el código para al menos dos casos, y luego copiar y pegar adaptando a cada caso.\nEs importante notar que las variables total, IVA y clienteFrecuente se definen dentro del bloque de código a continuación, por lo que no se puede acceder a ellas fuera de este bloque. Esto se conoce como ámbito o alcance de la variable. Recordar que en PSeInt la asignación de una variable implica su declaración (designar un espacio de memoria reservado con un nombre determinado y un tipo de dato determinado), e inicialización (dato inicial asignado a la variable).\nSi cGuitarras + cBajos + cViolines + cBaterias + cTeclados  1 Entonces // Aquí se definen las variables mencionadas. // Por lo quefuera de este bloque no son accesibles. FinSi // Ninguna de las siguientes instrucciones funcionaría // en la práctica porque estas variables no están // definidas fuera del bloque anterior. Escribir total Escribir IVA Escribir clienteFrecuente Esta definición de variables dentro de un bloque específico suele ser para aquellas que se utilizan una sola vez y después no se usan a lo largo de programa.\nSimilar a la mejora que se realizó anteriormente para el ingreso de productos al carro, de ingresarlos uno a uno, a ingresar la cantidad de productos directamente; se puede considerar una manera altenativa de calcular el total, utilizando la variable total como acumulador.\nEn este caso, la variable total acumula el total. Primero, el usuario selecciona el producto del cual quiere modificar su cantidad, y luego el algoritmo resta mediante la instrucción (total Algoritmo TiendaMusical7 Escribir \"Tienda musical\" // En estas variables se almacena la cantidad de cada producto cGuitarras 1 Entonces Escribir \"Has comprado: \" Si cGuitarras  1 Entonces Escribir \"Guitarras: \", cGuitarras FinSi Si cBajos  1 Entonces Escribir \"Bajos: \", cBajos FinSi Si cViolines  1 Entonces Escribir \"Violines: \", cViolines FinSi Si cBaterias  1 Entonces Escribir \"Baterias: \", cBaterias FinSi Si cTeclados  1 Entonces Escribir \"Teclados: \", cTeclados FinSi // total Se puede ver que este enfoque para resolver el problema requiere más trabajo, y no es eficiente, dado que constantemente debe asignarse el total.\nCon el objetivo de ilustrar el uso de la estructura de control Para, se adapta nuevamente el problema:\nProblema: “Una tienda musical necesita contar con un programa que le permita a sus clientes registrar sus compras mientras las realizan, indicando los productos disponibles, permitiendo agregar y remover productos a su carro y calcular el monto total que suma el carro. Además al finalizar la compra se deberá calcular el IVA para la venta, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total. Antes de finalizar, el programa debe permitir al usuario dividir su boleta en varias compras.”\nEste problema implica preguntar al usuario en cuántas boletas desea dividir su compra. Por lo tanto, debe repetirse un conjunto de instrucciones una cantidad determinada (o predefinida por el usuario) de veces. En este caso, conviene utilizar el ciclo Para.\nAlgoritmo TiendaMusical8 Escribir \"Tienda musical\" // En estas variables se almacena la cantidad de cada producto cGuitarras 1 Entonces Escribir \"Has comprado: \" Si cGuitarras  1 Entonces Escribir \"Guitarras: \", cGuitarras FinSi Si cBajos  1 Entonces Escribir \"Bajos: \", cBajos FinSi Si cViolines  1 Entonces Escribir \"Violines: \", cViolines FinSi Si cBaterias  1 Entonces Escribir \"Baterias: \", cBaterias FinSi Si cTeclados  1 Entonces Escribir \"Teclados: \", cTeclados FinSi Escribir \"¿Desea dividir su boleta? Indique la cantidad (1 - 3).\" cantBoletas 3 Hacer Leer cantBoletas Si cantBoletas 3 Entonces Escribir \"No puede indicar una cantidad negativa.\" FinSi FinMientras esClienteFrecuente 0 Entonces Escribir \"No se han seleccionado todos los productos del carro.\" Escribir \"No se cursará la venta. Contactar a un vendedor.\" SiNo totalBoleta Cabe notar que la variable cantBoletas se declara e inicializa (se asigna con un 0) no al principio del programa, donde se suelen declarar e inicializar las variables. En algunos casos conviene realizarlo posteriormente para mayor claridad, es decir, dejar claro para qué sirve la variable de forma implícita (sin explicarlo en un comentario por ejemplo).\nLa situación en la que el usuario no selecciona todos los productos de su carro no se aborda en el algoritmo, pero podría y debiera considerarse.\nCódigo de TiendaMusical8\n(Queda pendiente revisar la ejecución del código de ejemplo y agregar funcionalidad relativa al cálculo de descuentos por producto revisada en clases. Se realizará para cuando se revise Java).\n","wordCount":"4754","inLanguage":"es","image":"https://cmarinkovic.github.io/programacion-de-computadores/%3Cimage%20path/url%3E","datePublished":"2022-04-17T00:20:33-04:00","dateModified":"2022-04-17T00:20:33-04:00","author":{"@type":"Person","name":"Cristóbal Marinkovic"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/"},"publisher":{"@type":"Organization","name":"Programación de Computadores 2022-1","logo":{"@type":"ImageObject","url":"https://cmarinkovic.github.io/programacion-de-computadores/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://cmarinkovic.github.io/programacion-de-computadores/ accesskey=h title="Programación de Computadores 2022-1 (Alt + H)">Programación de Computadores 2022-1</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://cmarinkovic.github.io/programacion-de-computadores/>Inicio</a>&nbsp;»&nbsp;<a href=https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/>Publicaciones</a></div><h1 class=post-title>Tienda musical</h1><div class=post-description>Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt.</div><div class=post-meta><span title="2022-04-17 00:20:33 -0400 -04">abril, 2022</span>&nbsp;·&nbsp;Cristóbal Marinkovic</div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Tabla de Contenidos</span></summary><div class=inner><ul><li><a href=#leer-escribir-y-asignaci%c3%b3n aria-label="Leer, Escribir y asignación"><em>Leer</em>, <em>Escribir</em> y asignación</a><ul><ul><li><a href=#estructuras-condicionales-si-si-sino-y-seg%c3%ban aria-label="Estructuras condicionales (Si, Si-SiNo y Según)">Estructuras condicionales (<em>Si</em>, <em>Si-SiNo</em> y Según)</a></li></ul></ul></li><li><a href=#ciclos-mientras-para aria-label="Ciclos (Mientras, Para)">Ciclos (Mientras, Para)</a></li></ul></div></details></div><div class=post-content><p>A continuación, se desarrolla un problema de ejemplo en PSeInt con niveles progresivos de dificultad, donde se explican y aplican los conceptos básicos revisados en la asignatura.</p><h1 id=leer-escribir-y-asignación><em>Leer</em>, <em>Escribir</em> y asignación<a hidden class=anchor aria-hidden=true href=#leer-escribir-y-asignación>#</a></h1><p>Dentro de las instrucciones fundamentales de PSeInt se encuentran <em>Leer</em> y <em>Escribir</em>, que permiten respectivamente recibir datos del usuario y mostrar datos por pantalla. La asignación permite evaluar una expresión y guardar su resultado (dato) en una variable, y designar un identificador o &ldquo;nombre&rdquo; para ésta.</p><p>Problema: &ldquo;Una tienda musical necesita contar con un programa que le permita calcular el IVA para sus ventas.&rdquo;</p><p>A partir del enunciado, se puede inferir que las entradas son el monto de venta y las salidas el IVA de la venta. También, la tienda podría necesitar saber la venta con IVA y sin IVA. Este es un análisis sencillo, pero importante para producir un programa que le &ldquo;sirva&rdquo; a la tienda.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical1
+	Escribir &#34;Tienda musical&#34;
+	Escribir &#34;Ingrese el monto de la venta: &#34;
+	Leer monto
+	
+	IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19% 
+	ventaConIVA &lt;- monto * (1 + IVA) 
+	
+	Escribir &#34;Venta sin IVA: &#34;, monto
+	Escribir &#34;IVA 19%&#34;
+	Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+FinAlgoritmo
+</code></pre><h3 id=estructuras-condicionales-si-si-sino-y-según>Estructuras condicionales (<em>Si</em>, <em>Si-SiNo</em> y Según)<a hidden class=anchor aria-hidden=true href=#estructuras-condicionales-si-si-sino-y-según>#</a></h3><p>Las estructuras condicionales permiten decidir qué bloque de código ejecutar según el resultado de una expresión que se evalúa al momento de ejecución, como toda expresión.</p><p>Problema: &ldquo;Una tienda musical necesita contar con un programa que le permita calcular el IVA para sus ventas, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total.&rdquo;</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical2
+	Escribir &#34;Tienda musical&#34;
+	Escribir &#34;Ingrese el monto de la venta: &#34;
+	Leer monto
+	
+	IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19% 
+	ventaConIVA &lt;- monto * (1 + IVA)
+	
+	Escribir &#34;Venta sin IVA: &#34;, monto
+	Escribir &#34;IVA 19%&#34;
+	Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+	
+	Escribir &#34;¿Es cliente frecuente?&#34;
+	Escribir &#34;1. Sí&#34;
+	Escribir &#34;2. No&#34;
+	Leer esClienteFrecuente
+	
+	Si esClienteFrecuente == 1 Entonces
+		Escribir &#34;Descuento 5%&#34;
+		Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+	Sino 
+		Si esClienteFrecuente == 2 Entonces
+			Escribir &#34;Total:&#34;, ventaConIVA
+		SiNo
+			Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+			Escribir &#34;Total:&#34;, ventaConIVA
+		FinSi
+	FinSi
+FinAlgoritmo
+</code></pre><p>Este algoritmo también puede realizarse con la estructura de control Según, que tiende a ser útil en situaciones simples donde &ldquo;según el valor de una variable se realizan ciertas acciones (se ejecuta un bloque de código)&rdquo;. <em>Si</em> y <em>Si-SiNo</em> se prefieren para situaciones donde las expresiones booleanas son más complicadas, por ejemplo cuando son comparaciones entre números o expresiones booleanas (a > b y a > c no puede evaluarse en un <em>Según</em>) compuestas.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical3
+	Escribir &#34;Tienda musical&#34;
+	Escribir &#34;Ingrese el monto de la venta: &#34;
+	Leer monto
+	
+	IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19% 
+	ventaConIVA &lt;- monto * (1 + IVA)
+	
+	Escribir &#34;Venta sin IVA: &#34;, monto
+	Escribir &#34;IVA 19%&#34;
+	Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+	
+	Escribir &#34;¿Es cliente frecuente?&#34;
+	Escribir &#34;1. Sí&#34;
+	Escribir &#34;2. No&#34;
+	Leer esClienteFrecuente
+	
+	Según esClienteFrecuente Hacer
+		1: 
+			Escribir &#34;Descuento 5%&#34;
+			Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+		2: 
+			Escribir &#34;Total:&#34;, ventaConIVA
+		De Otro Modo: 
+			Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+			Escribir &#34;Total:&#34;, ventaConIVA
+	FinSegun
+FinAlgoritmo
+</code></pre><h1 id=ciclos-mientras-para>Ciclos (Mientras, Para)<a hidden class=anchor aria-hidden=true href=#ciclos-mientras-para>#</a></h1><p>Generalmente en un programa se necesitan repetir acciones para lograr un objetivo, y así resolver un problema. Los ciclos permiten repetir un bloque de código múltiples veces si es necesario. Se ejecutan a intervalos discretos, es decir, una o más veces, una a una. Para esto cuentan con una expresión de control, que cada vez que inicia el ciclo o se pretende iniciar nuevamente (desde la segunda &ldquo;vuelta&rdquo; en adelante), se evalúa y retorna el dato verdadero o falso, según este dato el ciclo continúa o termina (depende de qué ciclo se trate si necesita un valor verdadero o falso para continuar). En la asignatura se utiliza el ciclo Mientras y Para que requieren que sus expresiones de control (también conocidas como &ldquo;condiciones de término&rdquo;) sean verdaderas.</p><p>Problema: &ldquo;Una tienda musical necesita contar con un programa que le permita a sus clientes registrar sus compras mientras las realizan, indicando los productos disponibles, permitiendo agregar y remover productos a su carro y calcular el monto total que suma el carro. Además al finalizar la compra se deberá calcular el IVA para la venta, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total.&rdquo;</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical4
+	Escribir &#34;Tienda musical&#34;
+	
+	// En estas variables se almacena la cantidad de cada producto
+	cGuitarras &lt;- 0 
+	cBajos &lt;- 0
+	cViolines &lt;- 0
+	cBaterias &lt;- 0
+	cTeclados &lt;- 0
+	
+	// Esta variable permite seleccionar la opción 
+	// y además controlar si el ciclo continúa.
+	opc &lt;- -1 
+	Mientras opc != 0  Hacer
+		Escribir &#34;Carro&#34;
+		Escribir &#34;1. Guitarra $200.000&#34;
+		Escribir &#34;2. Bajo $300.000&#34;
+		Escribir &#34;3. Violín $150.000&#34;
+		Escribir &#34;4. Batería $250.000&#34;
+		Escribir &#34;5. Teclado $200.000&#34;
+		Escribir &#34;6. Remover guitarra&#34;
+		Escribir &#34;7. Remover bajo&#34;
+		Escribir &#34;8. Remover violin&#34;
+		Escribir &#34;9. Remover bateria&#34;
+		Escribir &#34;10. Remover teclado&#34;
+		Escribir &#34;0. Comprar carro&#34;
+		
+		Leer opc
+		
+		Segun opc Hacer
+			1: 
+				cGuitarras &lt;- cGuitarras + 1
+			2: 
+				cBajos &lt;- cBajos + 1
+			3: 
+				cViolines &lt;- cViolines + 1
+			4: 
+				cBaterias &lt;- cBaterias + 1
+			5: 
+				cTeclados &lt;- cTeclados + 1
+			6: 
+				// Es importante verificar que hayan guitarras
+				// De lo contrario habrá guitarras negativas
+				Si cGuitarras &gt; 0 Entonces
+					cGuitarras &lt;- cGuitarras - 1
+				SiNo
+					Escribir &#34;No hay guitarras para remover.&#34;
+				FinSi
+				
+			7: 
+				Si cBajos &gt; 0 Entonces
+					cBajos &lt;- cBajos - 1
+				SiNo
+					Escribir &#34;No hay bajos para remover.&#34;
+				FinSi
+
+			8: 
+				Si cViolines &gt; 0 Entonces
+					cViolines &lt;- cViolines - 1
+				SiNo
+					Escribir &#34;No hay violines para remover.&#34;
+				FinSi
+			9: 
+				Si cBaterias &gt; 0 Entonces
+					cBaterias &lt;- cBaterias - 1
+				SiNo
+					Escribir &#34;No hay baterías para remover.&#34;
+				FinSi
+			10: 
+				Si cTeclados &gt; 0 Entonces
+					cTeclados &lt;- cTeclados - 1
+				SiNo
+					Escribir &#34;No hay teclados para remover.&#34;
+				FinSi
+			0: 
+				//Esta opción se deja vacía ya que si no
+				// existiera se mostraría el mensaje de error
+				// de De Otro Modo, ya que el usuario presiona
+				// 0 para terminar la compra.
+			De Otro Modo:
+				Escribir &#34;Opción errónea&#34;
+		FinSegun
+		
+		Escribir &#34;&#34;
+		Escribir &#34;Guitarras: &#34;, cGuitarras
+		Escribir &#34;Bajos: &#34;, cBajos
+		Escribir &#34;Violines: &#34;, cViolines
+		Escribir &#34;Baterías: &#34;, cBaterias
+		Escribir &#34;Teclados: &#34;, cTeclados
+		
+		Escribir &#34;&#34;
+		
+		Escribir &#34;Total: &#34;, cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+	FinMientras
+	
+	// Este Si-SiNo permite mostrar el detalle de sólo
+	// los productos que se han agregado, omitiendo
+	// mostrar el mensaje para productos que no se compraron.
+	Si cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 1 Entonces
+		Escribir &#34;Has comprado: &#34;
+		Si cGuitarras &gt; 1 Entonces
+			Escribir &#34;Guitarras: &#34;, cGuitarras
+		FinSi
+		
+		Si cBajos &gt; 1 Entonces
+			Escribir &#34;Bajos: &#34;, cBajos
+		FinSi
+		
+		Si cViolines &gt; 1 Entonces
+			Escribir &#34;Violines: &#34;, cViolines
+		FinSi
+		
+		Si cBaterias &gt; 1 Entonces
+			Escribir &#34;Baterias: &#34;, cBaterias
+			FinSi
+			
+		Si cTeclados &gt; 1 Entonces
+			Escribir &#34;Teclados: &#34;, cTeclados
+		FinSi
+		
+		total &lt;- cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+		
+		IVA &lt;- 0.19 //Sabiendo que el IVA es aprox. 19%.
+		ventaConIVA &lt;- total * (1 + IVA)
+		
+		Escribir &#34;Venta sin IVA: &#34;, total
+		Escribir &#34;IVA 19%&#34;
+		Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+		
+		Escribir &#34;¿Es cliente frecuente?&#34;
+		Escribir &#34;1. Sí&#34;
+		Escribir &#34;2. No&#34;
+		Leer esClienteFrecuente
+		
+		Según esClienteFrecuente Hacer
+			1: 
+				Escribir &#34;Descuento 5%&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+			2: 
+				Escribir &#34;Total:&#34;, ventaConIVA
+			De Otro Modo: 
+				Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA
+		FinSegun
+	SiNo
+		Escribir &#34;No hay suficientes productos.&#34;
+	FinSi
+FinAlgoritmo
+</code></pre><p>Una alternativa que es más eficiente para el usuario es que en vez de agregar/remover al carro productos de manera unitaria, pueda indicar cuánto llevará de un producto determinado. Para lograr esto habría que cambiar el código de la siguiente manera.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical5
+	Escribir &#34;Tienda musical&#34;
+	
+	// En estas variables se almacena la cantidad de cada producto
+	cGuitarras &lt;- 0 
+	cBajos &lt;- 0
+	cViolines &lt;- 0
+	cBaterias &lt;- 0
+	cTeclados &lt;- 0
+	
+	// Esta variable permite seleccionar la opción 
+	// y además controlar si el ciclo continúa.
+	opc &lt;- -1 
+	Mientras opc != 0  Hacer
+		Escribir &#34;Carro&#34;
+		Escribir &#34;1. Guitarra $200.000&#34;
+		Escribir &#34;2. Bajo $300.000&#34;
+		Escribir &#34;3. Violín $150.000&#34;
+		Escribir &#34;4. Batería $250.000&#34;
+		Escribir &#34;5. Teclado $200.000&#34;
+		Escribir &#34;0. Comprar carro&#34;
+		
+		Leer opc
+		
+		Segun opc Hacer
+			1: 
+				Escribir &#34;Indique la cantidad de guitarras: &#34;
+				Leer cGuitarras
+					
+				Si cGuitarras &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				// Este ciclo se utiliza para repetir la lectura de
+				// la cantidad de guitarras, si el usuario ingresa
+				// una cantidad menor a 0.
+				
+				Mientras cGuitarras &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de guitarras: &#34;
+					Leer cGuitarras
+					
+					Si cGuitarras &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+			2: 
+				Escribir &#34;Indique la cantidad de bajos: &#34;
+				Leer cBajos
+					
+				Si cBajos &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBajos &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de bajos: &#34;
+					Leer cBajos
+					
+					Si cBajos &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			3: 
+				Escribir &#34;Indique la cantidad de violines: &#34;
+				Leer cViolines
+					
+				Si cViolines &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cViolines &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de violines: &#34;
+					Leer cViolines
+					
+					Si cViolines &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			4: 
+				Escribir &#34;Indique la cantidad de baterias: &#34;
+				Leer cBaterias
+					
+				Si cBaterias &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBaterias &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de baterias: &#34;
+					Leer cBaterias
+					
+					Si cBaterias &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			5: 
+				Escribir &#34;Indique la cantidad de teclados: &#34;
+				Leer cTeclados
+					
+				Si cTeclados &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cTeclados &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de teclados: &#34;
+					Leer cTeclados
+					
+					Si cTeclados &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			0: 
+				
+			De Otro Modo:
+				Escribir &#34;Opción errónea&#34;
+		FinSegun
+		
+		Escribir &#34;&#34;
+		Escribir &#34;Guitarras: &#34;, cGuitarras
+		Escribir &#34;Bajos: &#34;, cBajos
+		Escribir &#34;Violines: &#34;, cViolines
+		Escribir &#34;Baterías: &#34;, cBaterias
+		Escribir &#34;Teclados: &#34;, cTeclados
+		
+		Escribir &#34;&#34;
+		
+		Escribir &#34;Total: &#34;, cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+	FinMientras
+	
+	// Este Si-SiNo permite mostrar el detalle de sólo
+	// los productos que se han agregado, omitiendo
+	// mostrar el mensaje para productos que no se compraron.
+	Si cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 1 Entonces
+		Escribir &#34;Has comprado: &#34;
+		Si cGuitarras &gt; 1 Entonces
+			Escribir &#34;Guitarras: &#34;, cGuitarras
+		FinSi
+		
+		Si cBajos &gt; 1 Entonces
+			Escribir &#34;Bajos: &#34;, cBajos
+		FinSi
+		
+		Si cViolines &gt; 1 Entonces
+			Escribir &#34;Violines: &#34;, cViolines
+		FinSi
+		
+		Si cBaterias &gt; 1 Entonces
+			Escribir &#34;Baterias: &#34;, cBaterias
+			FinSi
+			
+		Si cTeclados &gt; 1 Entonces
+			Escribir &#34;Teclados: &#34;, cTeclados
+		FinSi
+		
+		total &lt;- cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+		
+		IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19%.
+		ventaConIVA &lt;- total * (1 + IVA)
+		
+		Escribir &#34;Venta sin IVA: &#34;, total
+		Escribir &#34;IVA 19%&#34;
+		Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+		
+		Escribir &#34;¿Es cliente frecuente?&#34;
+		Escribir &#34;1. Sí&#34;
+		Escribir &#34;2. No&#34;
+		Leer esClienteFrecuente
+		
+		Según esClienteFrecuente Hacer
+			1: 
+				Escribir &#34;Descuento 5%&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+			2: 
+				Escribir &#34;Total:&#34;, ventaConIVA
+			De Otro Modo: 
+				Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA
+		FinSegun
+	SiNo
+		Escribir &#34;No hay suficientes productos.&#34;
+	FinSi
+FinAlgoritmo
+</code></pre><p>La longitud del código ha aumentado a 145 líneas. Esto se debe principalmente a que el código &ldquo;repite&rdquo; una misma acción para cada instrumento. Si se observa el código para 2 instrumentos, por ejemplo, la cantidad de líneas disminuye a 97 líneas, incluyendo los comentarios.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical6
+	Escribir &#34;Tienda musical&#34;
+	
+	// En estas variables se almacena la cantidad de cada producto
+	cGuitarras &lt;- 0 
+	cBajos &lt;- 0
+	
+	// Esta variable permite seleccionar la opción 
+	// y además controlar si el ciclo continúa.
+	opc &lt;- -1 
+	Mientras opc != 0  Hacer
+		Escribir &#34;Carro&#34;
+		Escribir &#34;1. Guitarra $200.000&#34;
+		Escribir &#34;2. Bajo $300.000&#34;
+		Escribir &#34;0. Comprar carro&#34;
+		
+		Leer opc
+		
+		Segun opc Hacer
+			1: 
+				Escribir &#34;Indique la cantidad de guitarras: &#34;
+				Leer cGuitarras
+					
+				Si cGuitarras &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				// Este ciclo se utiliza para repetir la lectura de
+				// la cantidad de guitarras, si el usuario ingresa
+				// una cantidad menor a 0.
+				Mientras cGuitarras &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de guitarras: &#34;
+					Leer cGuitarras
+					
+					Si cGuitarras &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+			2: 
+				Escribir &#34;Indique la cantidad de bajos: &#34;
+				Leer cBajos
+					
+				Si cBajos &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBajos &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de bajos: &#34;
+					Leer cBajos
+					
+					Si cBajos &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			0: 
+				
+			De Otro Modo:
+				Escribir &#34;Opción errónea&#34;
+		FinSegun
+		
+		Escribir &#34;&#34;
+		Escribir &#34;Guitarras: &#34;, cGuitarras
+		Escribir &#34;Bajos: &#34;, cBajos
+
+		Escribir &#34;&#34;
+		
+		Escribir &#34;Total: &#34;, cGuitarras * 200000 + cBajos * 300000
+	FinMientras
+	
+	// Este Si-SiNo permite mostrar el detalle de sólo
+	// los productos que se han agregado, omitiendo
+	// mostrar el mensaje para productos que no se compraron.
+	Si cGuitarras + cBajos &gt; 1 Entonces
+		Escribir &#34;Has comprado: &#34;
+		Si cGuitarras &gt; 1 Entonces
+			Escribir &#34;Guitarras: &#34;, cGuitarras
+		FinSi
+		
+		Si cBajos &gt; 1 Entonces
+			Escribir &#34;Bajos: &#34;, cBajos
+		FinSi
+		
+		total &lt;- cGuitarras * 200000 + cBajos * 300000
+		
+		IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19%.
+		ventaConIVA &lt;- total * (1 + IVA)
+		
+		Escribir &#34;Venta sin IVA: &#34;, total
+		Escribir &#34;IVA 19%&#34;
+		Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+		
+		Escribir &#34;¿Es cliente frecuente?&#34;
+		Escribir &#34;1. Sí&#34;
+		Escribir &#34;2. No&#34;
+		Leer esClienteFrecuente
+		
+		Según esClienteFrecuente Hacer
+			1: 
+				Escribir &#34;Descuento 5%&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+			2: 
+				Escribir &#34;Total:&#34;, ventaConIVA 
+			De Otro Modo: 
+				Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+				Escribir &#34;Total:&#34;, ventaConIVA
+		FinSegun
+	SiNo
+		Escribir &#34;No hay suficientes productos.&#34;
+	FinSi
+FinAlgoritmo
+</code></pre><p>Por lo tanto, si las acciones son &ldquo;repetitivas&rdquo; es recomedable realizar el código para al menos dos casos, y luego copiar y pegar adaptando a cada caso.</p><p>Es importante notar que las variables <em>total</em>, <em>IVA</em> y <em>clienteFrecuente</em> se definen dentro del bloque de código a continuación, por lo que no se puede acceder a ellas fuera de este bloque. Esto se conoce como ámbito o alcance de la variable. Recordar que en PSeInt la asignación de una variable implica su <strong>declaración</strong> (designar un espacio de memoria reservado con un nombre determinado y un tipo de dato determinado), e <strong>inicialización</strong> (dato inicial asignado a la variable).</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Si cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 1 Entonces
+
+	// Aquí se definen las variables mencionadas.
+	// Por lo quefuera de este bloque no son accesibles.
+
+FinSi
+
+// Ninguna de las siguientes instrucciones funcionaría
+// en la práctica porque estas variables no están
+// definidas fuera del bloque anterior.
+Escribir total
+Escribir IVA
+Escribir clienteFrecuente
+</code></pre><p>Esta definición de variables dentro de un bloque específico suele ser para aquellas que se utilizan una sola vez y después no se usan a lo largo de programa.</p><p>Similar a la mejora que se realizó anteriormente para el ingreso de productos al carro, de ingresarlos uno a uno, a ingresar la cantidad de productos directamente; se puede considerar una manera altenativa de calcular el total, utilizando la variable <em>total</em> como acumulador.</p><p>En este caso, la variable <em>total</em> acumula el total. Primero, el usuario selecciona el producto del cual quiere modificar su cantidad, y luego el algoritmo resta mediante la instrucción (total &lt;- total - cGuitarras * 200000 para el caso de las guitarras), la ponderación de las guitarras en el carro antes que el usuario modifique la cantidad de guitarras en él. Posteriormente el usuario indica la nueva cantidad de guitarras en el carro y se suma al total la ponderación de la nueva cantidad de guitarras.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical7
+	Escribir &#34;Tienda musical&#34;
+	
+	// En estas variables se almacena la cantidad de cada producto
+	cGuitarras &lt;- 0 
+	cBajos &lt;- 0
+	cViolines &lt;- 0
+	cBaterias &lt;- 0
+	cTeclados &lt;- 0
+	
+	total &lt;- 0 //Esta variable será un acumulador del total del carro.
+	
+	// Esta variable permite seleccionar la opción 
+	// y además controlar si el ciclo continúa.
+	opc &lt;- -1 
+	Mientras opc != 0  Hacer
+		Escribir &#34;Carro&#34;
+		Escribir &#34;1. Guitarra $200.000&#34;
+		Escribir &#34;2. Bajo $300.000&#34;
+		Escribir &#34;3. Violín $150.000&#34;
+		Escribir &#34;4. Batería $250.000&#34;
+		Escribir &#34;5. Teclado $200.000&#34;
+		Escribir &#34;0. Comprar carro&#34;
+		
+		Leer opc
+		
+		Segun opc Hacer
+			1: 
+				// Esta instrucción se utiliza para eliminar la ponderación de las
+				// guitarras ya agregadas anteriormente. La primera vez cGuitarras
+				// será 0 por lo que no restará nada.
+				total &lt;- total - cGuitarras * 200000 
+				
+				Escribir &#34;Indique la cantidad de guitarras: &#34;
+				Leer cGuitarras
+					
+				Si cGuitarras &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				// Este ciclo se utiliza para repetir la lectura de
+				// la cantidad de guitarras, si el usuario ingresa
+				// una cantidad menor a 0.
+				Mientras cGuitarras &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de guitarras: &#34;
+					Leer cGuitarras
+					
+					Si cGuitarras &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+				total &lt;- total + cGuitarras * 200000
+			2: 
+				total &lt;- total - cBajos * 300000
+				
+				Escribir &#34;Indique la cantidad de bajos: &#34;
+				Leer cBajos
+					
+				Si cBajos &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBajos &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de bajos: &#34;
+					Leer cBajos
+					
+					Si cBajos &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+				total &lt;- total + cBajos * 300000
+			3: 
+				total &lt;- total - cViolines * 150000
+				
+				Escribir &#34;Indique la cantidad de violines: &#34;
+				Leer cViolines
+					
+				Si cViolines &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cViolines &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de violines: &#34;
+					Leer cViolines
+					
+					Si cViolines &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+				total &lt;- total + cViolines * 150000
+			4: 
+				total &lt;- total - cBaterias * 250000
+				
+				Escribir &#34;Indique la cantidad de baterias: &#34;
+				Leer cBaterias
+					
+				Si cBaterias &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBaterias &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de baterias: &#34;
+					Leer cBaterias
+					
+					Si cBaterias &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+				total &lt;- total + cBaterias * 250000
+			5: 
+				total &lt;- total - cTeclados * 200000
+				
+				Escribir &#34;Indique la cantidad de teclados: &#34;
+				Leer cTeclados
+					
+				Si cTeclados &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cTeclados &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de teclados: &#34;
+					Leer cTeclados
+					
+					Si cTeclados &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+				
+				total &lt;- total + cTeclados * 200000
+			0: 
+				
+			De Otro Modo:
+				Escribir &#34;Opción errónea&#34;
+		FinSegun
+		
+		Escribir &#34;&#34;
+		Escribir &#34;Guitarras: &#34;, cGuitarras
+		Escribir &#34;Bajos: &#34;, cBajos
+		Escribir &#34;Violines: &#34;, cViolines
+		Escribir &#34;Baterías: &#34;, cBaterias
+		Escribir &#34;Teclados: &#34;, cTeclados
+		
+		Escribir &#34;&#34;
+		
+		Escribir &#34;Total: &#34;, total
+	FinMientras
+	
+	// Este Si-SiNo permite mostrar el detalle de sólo
+	// los productos que se han agregado, omitiendo
+	// mostrar el mensaje para productos que no se compraron.
+	Si cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 1 Entonces
+		Escribir &#34;Has comprado: &#34;
+		Si cGuitarras &gt; 1 Entonces
+			Escribir &#34;Guitarras: &#34;, cGuitarras
+		FinSi
+		
+		Si cBajos &gt; 1 Entonces
+			Escribir &#34;Bajos: &#34;, cBajos
+		FinSi
+		
+		Si cViolines &gt; 1 Entonces
+			Escribir &#34;Violines: &#34;, cViolines
+		FinSi
+		
+		Si cBaterias &gt; 1 Entonces
+			Escribir &#34;Baterias: &#34;, cBaterias
+		FinSi
+		
+		Si cTeclados &gt; 1 Entonces
+			Escribir &#34;Teclados: &#34;, cTeclados
+		FinSi
+		
+		// total &lt;- cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+		
+		IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19%.
+		ventaConIVA &lt;- total * (1 + IVA)
+		
+		Escribir &#34;Venta sin IVA: &#34;, total
+		Escribir &#34;IVA 19%&#34;
+		Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+		
+		Escribir &#34;¿Es cliente frecuente?&#34;
+		Escribir &#34;1. Sí&#34;
+		Escribir &#34;2. No&#34;
+		Leer esClienteFrecuente
+		
+		Según esClienteFrecuente Hacer
+		1: 
+			Escribir &#34;Descuento 5%&#34;
+			Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+		2: 
+			Escribir &#34;Total:&#34;, ventaConIVA
+		De Otro Modo: 
+			Escribir &#34;Opción inválida. No se aplicará descuento.&#34;
+			Escribir &#34;Total:&#34;, ventaConIVA
+		FinSegun
+	SiNo
+		Escribir &#34;No hay suficientes productos.&#34;
+	FinSi
+FinAlgoritmo
+</code></pre><p>Se puede ver que este enfoque para resolver el problema requiere más trabajo, y no es eficiente, dado que constantemente debe asignarse el total.</p><p>Con el objetivo de ilustrar el uso de la estructura de control <em>Para</em>, se adapta nuevamente el problema:</p><p>Problema: &ldquo;Una tienda musical necesita contar con un programa que le permita a sus clientes registrar sus compras mientras las realizan, indicando los productos disponibles, permitiendo agregar y remover productos a su carro y calcular el monto total que suma el carro. Además al finalizar la compra se deberá calcular el IVA para la venta, y en caso de que la venta sea realizada a un cliente frecuente realizar un descuento de 5% del total. Antes de finalizar, el programa debe permitir al usuario dividir su boleta en varias compras.&rdquo;</p><p>Este problema implica preguntar al usuario en cuántas boletas desea dividir su compra. Por lo tanto, debe repetirse un conjunto de instrucciones una cantidad determinada (o predefinida por el usuario) de veces. En este caso, conviene utilizar el ciclo <em>Para</em>.</p><pre tabindex=0><code class=language-pseudocode data-lang=pseudocode>Algoritmo TiendaMusical8
+	Escribir &#34;Tienda musical&#34;
+	
+	// En estas variables se almacena la cantidad de cada producto
+	cGuitarras &lt;- 0 
+	cBajos &lt;- 0
+	cViolines &lt;- 0
+	cBaterias &lt;- 0
+	cTeclados &lt;- 0
+	
+	// Esta variable permite seleccionar la opción 
+	// y además controlar si el ciclo continúa.
+	opc &lt;- -1 
+	Mientras opc != 0  Hacer
+		Escribir &#34;Carro&#34;
+		Escribir &#34;1. Guitarra $200.000&#34;
+		Escribir &#34;2. Bajo $300.000&#34;
+		Escribir &#34;3. Violín $150.000&#34;
+		Escribir &#34;4. Batería $250.000&#34;
+		Escribir &#34;5. Teclado $200.000&#34;
+		Escribir &#34;0. Comprar carro&#34;
+		
+		Leer opc
+		
+		Segun opc Hacer
+			1: 
+				// Este ciclo se utiliza para repetir la lectura de
+				// la cantidad de guitarras, si el usuario ingresa
+				// una cantidad menor a 0.
+				Escribir &#34;Indique la cantidad de guitarras: &#34;
+				Leer cGuitarras
+					
+				Si cGuitarras &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cGuitarras &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de guitarras: &#34;
+					Leer cGuitarras
+					
+					Si cGuitarras &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			2: 
+			
+				Escribir &#34;Indique la cantidad de bajos: &#34;
+				Leer cBajos
+					
+				Si cBajos &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+					
+				Mientras cBajos &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de bajos: &#34;
+					Leer cBajos
+					
+					Si cBajos &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			3: 
+				Escribir &#34;Indique la cantidad de violines: &#34;
+				Leer cViolines
+					
+				Si cViolines &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+					
+				Mientras cViolines &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de violines: &#34;
+					Leer cViolines
+					
+					Si cViolines &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			4: 
+				Escribir &#34;Indique la cantidad de baterias: &#34;
+				Leer cBaterias
+					
+				Si cBaterias &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+				
+				Mientras cBaterias &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de baterias: &#34;
+					Leer cBaterias
+					
+					Si cBaterias &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			5: 
+				Escribir &#34;Indique la cantidad de teclados: &#34;
+				Leer cTeclados
+					
+				Si cTeclados &lt; 0 Entonces
+					Escribir &#34;No puede indicar una cantidad negativa.&#34;
+				FinSi
+			
+				Mientras cTeclados &lt; 0 Hacer
+					Escribir &#34;Indique la cantidad de teclados: &#34;
+					Leer cTeclados
+					
+					Si cTeclados &lt; 0 Entonces
+						Escribir &#34;No puede indicar una cantidad negativa.&#34;
+					FinSi
+				FinMientras
+			0: 
+				
+			De Otro Modo:
+				Escribir &#34;Opción errónea&#34;
+		FinSegun
+		
+		Escribir &#34;&#34;
+		Escribir &#34;Guitarras: &#34;, cGuitarras
+		Escribir &#34;Bajos: &#34;, cBajos
+		Escribir &#34;Violines: &#34;, cViolines
+		Escribir &#34;Baterías: &#34;, cBaterias
+		Escribir &#34;Teclados: &#34;, cTeclados
+		
+		Escribir &#34;&#34;
+		
+		Escribir &#34;Total: &#34;, cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+	FinMientras
+	
+	
+	// Este Si-SiNo permite mostrar el detalle de sólo
+	// los productos que se han agregado, omitiendo
+	// mostrar el mensaje para productos que no se compraron.
+	Si cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 1 Entonces
+		Escribir &#34;Has comprado: &#34;
+		Si cGuitarras &gt; 1 Entonces
+			Escribir &#34;Guitarras: &#34;, cGuitarras
+		FinSi
+		
+		Si cBajos &gt; 1 Entonces
+			Escribir &#34;Bajos: &#34;, cBajos
+		FinSi
+		
+		Si cViolines &gt; 1 Entonces
+			Escribir &#34;Violines: &#34;, cViolines
+		FinSi
+		
+		Si cBaterias &gt; 1 Entonces
+			Escribir &#34;Baterias: &#34;, cBaterias
+		FinSi
+		
+		Si cTeclados &gt; 1 Entonces
+			Escribir &#34;Teclados: &#34;, cTeclados
+		FinSi
+		
+		Escribir &#34;¿Desea dividir su boleta? Indique la cantidad (1 - 3).&#34;
+		cantBoletas &lt;- 0
+		Mientras cantBoletas &lt; 0 o cantBoletas &gt; 3 Hacer
+			Leer cantBoletas
+			
+			Si cantBoletas &lt; 0 o cantBoletas &gt; 3 Entonces
+				Escribir &#34;No puede indicar una cantidad negativa.&#34;
+			FinSi
+		FinMientras
+		
+		esClienteFrecuente &lt;- 1 //Se le asigna un valor inicial arbitrario.
+		
+		Mientras clienteFrecuente != 1 o clienteFrecuente != 2 Hacer
+			Escribir &#34;¿Es cliente frecuente?&#34;
+			Escribir &#34;1. Sí&#34;
+			Escribir &#34;2. No&#34;
+			Leer esClienteFrecuente
+			
+			Si clienteFrecuente != 1 o clienteFrecuente != 2 Entonces
+				Escribir &#34;Opción inválida.&#34;
+			FinSi
+		FinMientras
+		
+		Para i &lt;- 1 Hasta cantBoletas Hacer
+			Escribir &#34;Boleta Nº&#34;, i
+			Escribir &#34;Seleccione los productos de su carro que llevará en esta boleta: &#34; 
+			Escribir &#34;1. Guitarras (&#34;, cGuitarras, &#34;)&#34;
+			Escribir &#34;2. Bajos (&#34;, cBajos, &#34;)&#34;
+			Escribir &#34;3. Violines (&#34;, cViolines, &#34;)&#34;
+			Escribir &#34;4. Baterías (&#34;, cBaterías, &#34;)&#34;
+			Escribir &#34;5. Teclados (&#34;, cTeclados, &#34;)&#34;
+			
+			Leer opc
+			
+			Segun opc Hacer
+				1: 
+					Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+		
+					Si cGuitarras - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+					SiNo
+							cGuitarras &lt;- cGuitarras - cantidad
+					FinSi
+				
+					Mientras cGuitarras &lt; 0 Hacer
+						Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+					
+						Si cGuitarras - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cGuitarras &lt;- cGuitarras - cantidad
+						FinSi
+					FinMientras
+				2: 
+					Escribir &#34;Cantidad a agregar a la boleta: &#34;
+					Leer cantidad
+						
+					Si cBajos - cantidad &lt; 0 Entonces
+						Escribir &#34;Cantidad inválida&#34;
+					SiNo
+						cBajos &lt;- cBajos - cantidad
+					FinSi
+						
+					Mientras cBajos &lt; 0 Hacer
+						Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+						
+						Si cBajos - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cBajos &lt;- cBajos - cantidad
+						FinSi
+					FinMientras
+				3: 
+					Escribir &#34;Cantidad a agregar a la boleta: &#34;
+					Leer cantidad
+						
+					Si cViolines - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cViolines &lt;- cViolines - cantidad
+					FinSi
+					
+					Mientras cViolines &lt; 0 Hacer
+						Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+						
+						Si cViolines - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cViolines &lt;- cViolines - cantidad
+						FinSi
+					FinMientras
+				4:
+					Escribir &#34;Cantidad a agregar a la boleta: &#34;
+					Leer cantidad
+						
+					Si cBaterias - cantidad &lt; 0 Entonces
+						Escribir &#34;Cantidad inválida&#34;
+					SiNo
+						cBaterias &lt;- cBaterias - cantidad
+					FinSi
+						
+					Mientras cBaterias &lt; 0 Hacer
+						Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+						
+						Si cBaterias - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cBaterias &lt;- cBaterias - cantidad
+						FinSi
+					FinMientras
+				5:
+					Escribir &#34;Cantidad a agregar a la boleta: &#34;
+					Leer cantidad
+						
+					Si cTeclados - cantidad &lt; 0 Entonces
+						Escribir &#34;Cantidad inválida&#34;
+					SiNo
+						cTeclados &lt;- cTeclados - cantidad
+					FinSi
+					
+					Mientras cTeclados &lt; 0 Hacer
+						Escribir &#34;Cantidad a agregar a la boleta: &#34;
+						Leer cantidad
+						
+						Si cTeclados - cantidad &lt; 0 Entonces
+							Escribir &#34;Cantidad inválida&#34;
+						SiNo
+							cTeclados &lt;- cTeclados - cantidad
+						FinSi
+					FinMientras
+				De Otro Modo: 
+					i &lt;- i - 1 // Para &#34;descontar&#34; esta iteración del Para.
+					Escribir &#34;Opción errónea.&#34;
+			FinSegun
+			
+			Si i == cantBoletas y cGuitarras + cBajos + cViolines + cBaterias + cTeclados &gt; 0 Entonces
+				Escribir &#34;No se han seleccionado todos los productos del carro.&#34;
+				Escribir &#34;No se cursará la venta. Contactar a un vendedor.&#34;
+			SiNo
+				totalBoleta &lt;- cGuitarras * 200000 + cBajos * 300000 + cViolines * 150000 + cBaterias * 250000 + cTeclados * 200000
+				
+				IVA &lt;- 0.19 // Sabiendo que el IVA es aprox. 19%.
+				ventaConIVA &lt;- totalBoleta * (1 + IVA)
+				
+				Escribir &#34;Venta sin IVA: &#34;, totalBoleta
+				Escribir &#34;IVA 19%&#34;
+				Escribir &#34;Venta con IVA:&#34;, ventaConIVA
+				
+				Según esClienteFrecuente Hacer
+				1: 
+					Escribir &#34;Descuento 5%&#34;
+					Escribir &#34;Total:&#34;, ventaConIVA * 0.95
+				2: 
+					Escribir &#34;Total:&#34;, ventaConIVA
+				FinSegun
+			FinSi
+		FinPara
+	SiNo
+		Escribir &#34;No hay suficientes productos.&#34;
+	FinSi
+FinAlgoritmo
+</code></pre><p>Cabe notar que la variable <em>cantBoletas</em> se declara e inicializa (se asigna con un 0) no al principio del programa, donde se suelen declarar e inicializar las variables. En algunos casos conviene realizarlo posteriormente para mayor claridad, es decir, dejar claro para qué sirve la variable de forma implícita (sin explicarlo en un comentario por ejemplo).</p><p>La situación en la que el usuario no selecciona todos los productos de su carro no se aborda en el algoritmo, pero podría y debiera considerarse.</p><p><a href=TiendaMusical8.psc>Código de TiendaMusical8</a></p><p>(Queda pendiente revisar la ejecución del código de ejemplo y agregar funcionalidad relativa al cálculo de descuentos por producto revisada en clases. Se realizará para cuando se revise Java).</p></div><footer class=post-footer><nav class=paginav><a class=prev href=https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/introducci%C3%B3n/><span class=title>« Página anterior</span><br><span>Introducción</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://cmarinkovic.github.io/programacion-de-computadores/>Programación de Computadores 2022-1</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(t=>{const n=t.parentNode.parentNode,e=document.createElement("button");e.classList.add("copy-code"),e.innerText="copiar";function s(){e.innerText="¡copiado!",setTimeout(()=>{e.innerText="copiar"},2e3)}e.addEventListener("click",o=>{if("clipboard"in navigator){navigator.clipboard.writeText(t.textContent),s();return}const e=document.createRange();e.selectNodeContents(t);const n=window.getSelection();n.removeAllRanges(),n.addRange(e);try{document.execCommand("copy"),s()}catch(e){}n.removeRange(e)}),n.classList.contains("highlight")?n.appendChild(e):n.parentNode.firstChild==n||(t.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?t.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(e):t.parentNode.appendChild(e))})</script></body></html>

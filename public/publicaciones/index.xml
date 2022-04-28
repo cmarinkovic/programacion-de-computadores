@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Publicaciones on Programación de Computadores 2022-1</title>
+    <link>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/</link>
+    <description>Recent content in Publicaciones on Programación de Computadores 2022-1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Apr 2022 00:20:33 -0400</lastBuildDate><atom:link href="https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Presentaciones</title>
+      <link>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/presentaciones/</link>
+      <pubDate>Mon, 18 Apr 2022 00:20:33 -0400</pubDate>
+      
+      <guid>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/presentaciones/</guid>
+      <description>Clase 1-2: Conceptos básicos de hardware y software
+Clase 3: Conceptos básicos de programación
+Clase 4: Algoritmos
+Clase 5: Algoritmos y estructuras de control
+Clase 6: Algoritmos y estructuras de control
+Clase 7-9: Estructuras de control y ejercicios resueltos
+Clase 11: Estructura de un programa
+Clase 18: Arreglos</description>
+    </item>
+    
+    <item>
+      <title>Introducción</title>
+      <link>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/introducci%C3%B3n/</link>
+      <pubDate>Sun, 17 Apr 2022 00:20:33 -0400</pubDate>
+      
+      <guid>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/introducci%C3%B3n/</guid>
+      <description>Conceptos básicos de programación.</description>
+    </item>
+    
+    <item>
+      <title>Tienda musical</title>
+      <link>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/</link>
+      <pubDate>Sun, 17 Apr 2022 00:20:33 -0400</pubDate>
+      
+      <guid>https://cmarinkovic.github.io/programacion-de-computadores/publicaciones/tienda-musical/</guid>
+      <description>Ejemplo de Tienda musical con el uso de instrucciones básicas de PSeInt.</description>
+    </item>
+    
+  </channel>
+</rss>
